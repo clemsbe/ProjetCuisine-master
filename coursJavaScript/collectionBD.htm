@@ -1,0 +1,38 @@
+<html>
+   <head>
+      <title>
+         Collection de BD "Le Petit Spirou"
+      </title>
+      <script>
+         var spirou=new Array()
+         // déclaration de la variable spirou qui est de type tableau
+         spirou=["Dis Bonjour à la dame !","Tu veux mon doigt ?","Mais ! Qu'est-ce que tu fabriques ?","C'est pour ton bien !","Merci qui ?","N'oublie pas ta capuche !","Demande à ton père !","T'as qu'à t'retenir !","C'est pas de ton âge !","Tu comprendras quand tu seras grand !"] ;
+         // assignation de l'ensemble des valeurs dans le tableau
+         function RecupTitre(){
+            var numero;
+             numero=parseFloat(document.BD.numero.value)-1;
+             // récupération du nombre introduit par l'utilisateur
+            if((numero>=0)&&(numero<=9)){
+               alert("Le titre correspondant au numéro est :" + spirou[numero]);
+                // affichage du titre correspondant au numéro introduit dans le formulaire
+            }else{
+               alert("Vous devez encoder un numéro compris entre 1 et 10");
+                // affichage d'un message d'erreur
+             }
+         }
+         function AfficheListe(){
+            for(i=0;i<spirou.length;i=i+1){ 
+               // parcours de toutes les valeurs du tableau
+                document.write(spirou[i]+"<br>");
+                }
+            }
+         </script>
+      </head>
+      <body>
+         <form name="BD">
+            <input type="text" name="numero">
+               <input type="button" value="Afficher le titre correspondant" onclick="RecupTitre();">
+                  <input type="button" value="Afficher la liste complète" onclick="AfficheListe();">
+                  </form>
+               </body>
+            </html>
