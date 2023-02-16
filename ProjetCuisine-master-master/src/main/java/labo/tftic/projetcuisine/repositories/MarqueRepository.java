@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MarqueRepositorie extends JpaRepository<Marque, Integer>, JpaSpecificationExecutor<Marque> {
+public interface MarqueRepository extends JpaRepository<Marque, Integer>, JpaSpecificationExecutor<Marque> {
 }

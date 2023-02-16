@@ -16,20 +16,21 @@ public class AlimentCreateForm {
 //    @NotBlank(message = "errors.notBlank")
     private String nom;
 //    @NotBlank(message = "errors.notBlank")
-    private String unite;
+    private Integer quantite;
 
     public Aliment toBll() {
+
         return Aliment.builder()
                 .nom(nom)
-                .unite(unite)
+                .quantite(quantite)
                 .active(true)
                 .build();
     }
 
-    public static AlimentCreateForm fromBll(Aliment employe) {
-        return AlimentCreateForm.builder()
-                .nom(employe.getNom())
-                .unite(employe.getUnite())
+    public Aliment fromBll() {
+        return Aliment.builder()
+                .nom(nom)
+                .quantite(quantite)
                 .build();
     }
 }

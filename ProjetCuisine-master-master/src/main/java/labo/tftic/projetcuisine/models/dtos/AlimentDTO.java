@@ -11,7 +11,7 @@ public class AlimentDTO
 {
 private String nom;
 
-private  String unite;
+private  String quantite;
 
 
 public static AlimentDTO fromEntity(Aliment aliment){
@@ -22,7 +22,7 @@ public static AlimentDTO fromEntity(Aliment aliment){
 
     return AlimentDTO.builder()
             .nom(aliment.getNom())
-            .unite(aliment.getUnite())
+            .quantite(String.valueOf(aliment.getQuantite()))
             .build();
 }
 

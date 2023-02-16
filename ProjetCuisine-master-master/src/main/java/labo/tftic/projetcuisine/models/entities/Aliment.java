@@ -20,7 +20,7 @@ public class Aliment{
     @Setter
     @Getter
     @Column
-    private String unite;
+    private Integer quantite;
     @ManyToOne
     private Recette recette;
 

@@ -40,7 +40,8 @@ public class AlimentController implements BaseRestController<Aliment, Integer> {
     public ResponseEntity<Aliment> readOne(
             @PathVariable Integer id
     ) {
-        Aliment aliment = this.alimentService.readOneByKey(id).orElseThrow(() -> new HttpNotFoundException("Aliment with id(" + id + ") is not found"));
+        Aliment aliment = this.alimentService.readOneByKey(id)
+                .orElseThrow(() -> new HttpNotFoundException("Aliment with id(" + id + ") is not found"));
 
         return ResponseEntity.ok(aliment);
     }

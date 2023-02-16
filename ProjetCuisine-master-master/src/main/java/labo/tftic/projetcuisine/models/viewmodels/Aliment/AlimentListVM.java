@@ -16,7 +16,7 @@ public class AlimentListVM {
 
         Aliment aliment = this.values.get(index);
 
-        return aliment.getNom()+ " " + aliment.getUnite();
+        return aliment.getNom()+ " " + aliment.getQuantite();
 
     }
 }
